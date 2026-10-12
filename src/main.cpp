@@ -57,15 +57,15 @@ int main(int argc, char** argv) {
     }
 
     gbarecomp::RunOptions opts;
-    opts.builtin_game_name = "Kirby: Nightmare in Dream Land (USA)";
+    opts.builtin_game_name = "Kirby: Nightmare in Dream Land";
     opts.builtin_rom_sha1 = kKirbyUsaSha1;
     opts.launcher_region = "USA";
     opts.launcher_boxart = "assets/img/boxart_kirby.tga";
     opts.launcher_game_config = "game.toml";
     opts.launcher_save_path = "saves/kirby_nid.sav";
-    opts.launcher_expose_widescreen = true;
-    opts.launcher_expose_adaptive_view = true;
-    opts.widescreen_view_width = 284;
+    opts.launcher_expose_widescreen = false;
+    opts.launcher_expose_adaptive_view = false;
+    opts.widescreen_view_width = 0;
     opts.launcher_enable_rom_patches = false;
 
     // PC conveniences: rewind + fast-forward, save states, sharper scaling.
@@ -78,14 +78,29 @@ int main(int argc, char** argv) {
     opts.freely_resizable_window = true;
     opts.max_view_width = 432;
 
-#if defined(GBAGAME_RECOMP_UI)
     std::vector<std::string> args(argv, argv + argc);
+    bool has_state_dir = false;
+    for (size_t i = 1; i < args.size(); ++i) {
+        if (args[i] == "--state-dir") {
+            has_state_dir = true;
+            break;
+        }
+    }
+    if (!has_state_dir) {
+        args.push_back("--state-dir");
+        args.push_back("saves");
+    }
+
+#if defined(GBAGAME_RECOMP_UI)
     if (game_launcher_preboot(args, opts)) return 0;
     std::vector<char*> av;
     av.reserve(args.size());
     for (auto& arg : args) av.push_back(arg.data());
     return gbarecomp::run_game(static_cast<int>(av.size()), av.data(), opts);
 #else
-    return gbarecomp::run_game(argc, argv, opts);
+    std::vector<char*> av;
+    av.reserve(args.size());
+    for (auto& arg : args) av.push_back(arg.data());
+    return gbarecomp::run_game(static_cast<int>(av.size()), av.data(), opts);
 #endif
 }
