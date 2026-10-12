@@ -1,0 +1,57 @@
+[game]
+name = "Kirby: Nightmare in Dream Land"
+short_name = "kirby_nid"
+
+[program]
+name = "Kirby: Nightmare in Dream Land (USA)"
+id = "A7KE"
+load_address = 0x08000000
+size = 0x00800000
+entry_pc = 0x08000000
+speculative_literal_harvest = true
+aot_scan_start = 0x08000000
+aot_scan_end = 0x08800000
+static_resume_all = true
+codegen_shards = 64
+
+[identity]
+sha1 = "37a476567d133c146fee6b5e2eb0b07a215da6b0"
+md5 = "35ae64b0f27e60107c14ab956f6cdf70"
+
+[recompiler]
+entry_point = "0x08000000"
+out_dir = "generated"
+strict = true
+
+[bios]
+sha1 = "300c20df6731a33952ded8c436f7f186d25d3492"
+hle = false
+skip_intro = true
+
+[rom]
+path = "roms/kirby_nid_usa.gba"
+sha1 = "37a476567d133c146fee6b5e2eb0b07a215da6b0"
+
+[save]
+type = "sram"
+size = 32768
+path = "saves/kirby_nid.sav"
+
+[runtime]
+debug_port = 19894
+window_title = "KirbyRecomp"
+
+[video]
+screen = "raw"
+view_width = 240
+resize_view = false
+sharp_filter = true
+widescreen = false
+
+[audio]
+shadow = false
+
+[[data_range]]
+start = 0x08000004
+end = 0x080000C0
+note = "cartridge header (Nintendo logo, title, game code, checksums)"

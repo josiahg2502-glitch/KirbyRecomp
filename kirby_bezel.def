@@ -1,0 +1,4 @@
+LIBRARY kirby_bezel.dll
+
+EXPORTS
+SDL_DYNAPI_entry

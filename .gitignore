@@ -1,0 +1,39 @@
+# Commercial ROM and BIOS binaries (Never commit copyrighted dumps)
+*.gba
+*.GBA
+*.bin
+*.BIN
+gba_bios.bin
+rom.cfg
+bios.cfg
+
+# Save files and savestates
+saves/
+*.sav
+*.state*
+*.log
+*.raw
+*.bmp
+
+# Build directories & cache
+build/
+build-win/
+recomp_cache/
+release-stage/
+gbarecomp/
+recomp-ui/
+overlay_toolchain/
+generated/
+*.zip
+*.exe
+*.dll
+*.o
+*.obj
+*.bak*
+_to_delete/
+
+# OS & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

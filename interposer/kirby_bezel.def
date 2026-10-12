@@ -1,0 +1,2 @@
+EXPORTS
+    SDL_DYNAPI_entry

@@ -1,0 +1,46 @@
+Kirby: Nightmare in Dream Land Recomp - Windows x64 v1.0.0
+=============================================================
+
+1. Quick Start:
+   - Double-click "Play Kirby.cmd" (or "KirbyRecomp.exe").
+   - Boots directly into smooth 1080p Borderless Fullscreen with custom Kirby artwork bezel.
+   - Plug in any controller (Xbox, PlayStation, Switch Pro, generic USB) for zero-configuration play!
+
+2. Controls:
+   - Gamepad (Xbox / PC / PlayStation / Switch):
+       * Left Analog Stick & D-Pad = 8-Directional Movement / Duck / Fly
+       * A (Cross / B)             = Jump / Float / Fly
+       * B (Circle / A)            = Inhale / Swallow / Spit / Power Attack
+       * X (Square / Y)            = Secondary Inhale / Attack (Ergonomic thumb comfort)
+       * Y (Triangle / X)          = Secondary Jump / Float
+       * LT (L2)                   = Drop Power / Discard Ability (L)
+       * RT (R2)                   = Drop Power / Discard Ability (R)
+       * Start                     = Pause / Ability Description / In-game Menu
+       * Back / Select             = Select / Sleep Wake
+   - Keyboard:
+       * Arrow Keys                = D-Pad / Movement
+       * X                         = A (Jump / Float)
+       * Z                         = B (Inhale / Attack)
+       * C                         = L (Drop Ability)
+       * V                         = R (Drop Ability)
+       * Enter                     = Start (Pause)
+       * Right Shift               = Select
+
+3. System Hotkeys & Enhanced Features:
+   - F10 : Toggle 1080p Bezel on / off (Clean Fullscreen mode with clean black pillarboxes)
+   - F9  : Cycle Controller Presets (Xbox Standard, Switch, Trigger Action, Classic 1:1) with on-screen HUD toast
+   - F11 : In-game settings / overlay menu (replaces Escape)
+   - Esc : Instant clean exit (safely flushes saves and closes)
+   - F1  : Quick Save State (Slot 1) with on-screen HUD confirmation
+   - F2  : Quick Load State (Slot 1) with on-screen HUD confirmation
+   - Hold 1 : Rewind gameplay
+   - Hold 2 : Fast-forward gameplay
+
+4. Audio & Display Enhancements:
+   - Band-limited anti-aliased audio resampling bridge eliminates all buffer underruns, crackle, and stutter.
+   - Handcrafted 16:9 custom Kirby: Nightmare in Dream Land bezel scaled to 1080p.
+   - Toggle to Clean Fullscreen mode anytime with F10 for an authentic 3:2 aspect ratio presentation.
+   - Run "Remap Controller.bat" anytime to customize gamepad buttons and triggers.
+
+5. Save Data:
+   - In-game saves are automatically written to saves/kirby_nid.sav upon saving.
